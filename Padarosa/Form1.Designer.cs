@@ -90,6 +90,7 @@
             // 
             this.txbSenha.Location = new System.Drawing.Point(250, 105);
             this.txbSenha.Name = "txbSenha";
+            this.txbSenha.PasswordChar = '•';
             this.txbSenha.Size = new System.Drawing.Size(200, 20);
             this.txbSenha.TabIndex = 5;
             // 
@@ -102,6 +103,7 @@
             this.bntEntrar.TabIndex = 6;
             this.bntEntrar.Text = "Entrar";
             this.bntEntrar.UseVisualStyleBackColor = false;
+            this.bntEntrar.Click += new System.EventHandler(this.bntEntrar_Click);
             // 
             // Form1
             // 
