@@ -126,6 +126,7 @@
             this.Controls.Add(this.lblPrincipal);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormMenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenuPrincipal";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

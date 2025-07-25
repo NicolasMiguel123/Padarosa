@@ -18,7 +18,7 @@ namespace Padarosa
         {
             InitializeComponent();
             this.usuario = usuario;
-            lblusuario.Text = $"Você esta logado como : {usuario.NameCompleto}";
+            lblusuario.Text = $"Você esta logado como : {usuario.NomeCompleto}";
         }
 
         private void btngestaoprodutos_Click(object sender, EventArgs e)

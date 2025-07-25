@@ -23,7 +23,7 @@ namespace Padarosa
             {
                 MessageBox.Show("E-mail invalido!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if(txbSenha.Text.Length > 3)
+            else if(txbSenha.Text.Length < 3)
             {
                 MessageBox.Show("Senha invalido ou incorreto!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -36,13 +36,14 @@ namespace Padarosa
                 // Variavel p/ armazenar o resultado do logar (SELECT):
                 DataTable resultado = new DataTable();
                 resultado = usuario.Logar();
+                //MessageBox.Show(resultado.Rows.Count.ToString());
 
                 // Verificar se a tabela tem ao menos uma linha:
                 if(resultado.Rows.Count > 0)
                 {
                     MessageBox.Show("OK");
                     // Amarzenar as infos do usuarios do obj:
-                    usuario.NameCompleto = resultado.Rows[0]["nome_completo"].ToString();
+                    usuario.NomeCompleto = resultado.Rows[0]["nome_completo"].ToString();
                     usuario.Id = (int)resultado.Rows[0]["id"];
                     // Mudar para o menu principal:
                     FormMenuPrincipal formMenuPrincipal = new FormMenuPrincipal(usuario);
