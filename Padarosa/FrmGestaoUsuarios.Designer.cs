@@ -140,6 +140,7 @@
             this.grbEdicao.Controls.Add(this.txbnomeedicao);
             this.grbEdicao.Controls.Add(this.lblemail2);
             this.grbEdicao.Controls.Add(this.btneditar);
+            this.grbEdicao.Enabled = false;
             this.grbEdicao.Location = new System.Drawing.Point(416, 304);
             this.grbEdicao.Name = "grbEdicao";
             this.grbEdicao.Size = new System.Drawing.Size(373, 206);
@@ -212,6 +213,7 @@
             // 
             this.grbapagar.Controls.Add(this.lblapagar);
             this.grbapagar.Controls.Add(this.btnapagar);
+            this.grbapagar.Enabled = false;
             this.grbapagar.Location = new System.Drawing.Point(32, 516);
             this.grbapagar.Name = "grbapagar";
             this.grbapagar.Size = new System.Drawing.Size(746, 54);
@@ -223,7 +225,7 @@
             // 
             this.lblapagar.AutoSize = true;
             this.lblapagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblapagar.Location = new System.Drawing.Point(88, 16);
+            this.lblapagar.Location = new System.Drawing.Point(87, 18);
             this.lblapagar.Name = "lblapagar";
             this.lblapagar.Size = new System.Drawing.Size(321, 20);
             this.lblapagar.TabIndex = 7;
@@ -245,6 +247,7 @@
             this.dgvUsuarios1.AllowUserToDeleteRows = false;
             this.dgvUsuarios1.AllowUserToResizeColumns = false;
             this.dgvUsuarios1.AllowUserToResizeRows = false;
+            this.dgvUsuarios1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios1.Location = new System.Drawing.Point(32, 23);
             this.dgvUsuarios1.Name = "dgvUsuarios1";

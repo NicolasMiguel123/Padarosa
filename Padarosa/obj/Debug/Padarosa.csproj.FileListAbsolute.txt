@@ -32,3 +32,6 @@ C:\Users\nicolas.mssilva1\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.cspr
 C:\Users\nicolas.mssilva1\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.exe
 C:\Users\nicolas.mssilva1\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.pdb
 C:\Users\nicolas.mssilva1\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.FrmGestaoUsuarios.resources
+C:\Users\nicolas.mssilva1\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.FrmCaixa.resources
+C:\Users\nicolas.mssilva1\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.FrmComanda.resources
+C:\Users\nicolas.mssilva1\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.FrmGestaoProduto.resources

@@ -14,6 +14,8 @@ namespace Padarosa
     {
         // Variavel global:
         Model.Usuario usuario;
+        private string email;
+
         public FrmGestaoUsuarios(Model.Usuario usuario)
         {
             InitializeComponent();
@@ -46,9 +48,25 @@ namespace Padarosa
             else
             {
                 // Inicia edição no bd:
-                // implementar a edição ***
+                Model.Usuario usuario = new Model.Usuario();
+                usuario.Email = txbemail.Text;
+                usuario.NomeCompleto = txbnome.Text;
+                usuario.Senha = txbsenha.Text;
 
-                Atualizardgv();
+                if (usuario.Cadastrar())
+                {
+                    MessageBox.Show("Usuario cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Limpar os campos de cadastro
+                    txbemail.Clear();
+                    txbnome.Clear();
+                    txbsenha.Clear();
+                    //Atualiza o dgv (reexecutando o select);
+                    Atualizardgv();
+                }
+                else
+                {
+                    MessageBox.Show("fala ao cadastrar o usuario", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             }
         }
@@ -71,6 +89,9 @@ namespace Padarosa
             else
             {
                 // Inicia edição no bd:
+                this.usuario.NomeCompleto = txbnomeedicao.Text;
+                this.usuario.Email = txbemailedicao.Text;
+                this.usuario.Senha = txbsenhaedicao.Text;
                 // Instanciar o usuario
                 Model.Usuario usuario = new Model.Usuario();
                 usuario.Email = txbemail.Text;
@@ -128,12 +149,12 @@ namespace Padarosa
         {
             int linhaSelecionada = dgvUsuarios1.SelectedCells[0].RowIndex;
 
-            string nome = dgvUsuarios1.Rows[linhaSelecionada].Cells[1].Value.ToString();
-            string email = dgvUsuarios1.Rows[linhaSelecionada].Cells[2].Value.ToString();
+            this.usuario.NomeCompleto = dgvUsuarios1.Rows[linhaSelecionada].Cells[1].Value.ToString();
+            this.usuario.Email = dgvUsuarios1.Rows[linhaSelecionada].Cells[2].Value.ToString();
             this.usuario.Id = (int)dgvUsuarios1.Rows[linhaSelecionada].Cells[0].Value;
             // Atribuir os dados da linha selecionada no grbEditar:
-           txbnomeedicao.Text = nome;
-           txbemailedicao.Text = email;
+            txbnomeedicao.Text = Name;
+            txbemailedicao.Text = email;
             // Ativar o grbEditar
             grbEdicao.Enabled = true;
 
