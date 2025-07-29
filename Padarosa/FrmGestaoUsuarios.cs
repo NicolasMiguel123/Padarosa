@@ -65,7 +65,7 @@ namespace Padarosa
                 }
                 else
                 {
-                    MessageBox.Show("fala ao cadastrar o usuario", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("falha ao cadastrar o usuario", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

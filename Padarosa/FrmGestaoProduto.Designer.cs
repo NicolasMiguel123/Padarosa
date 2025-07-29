@@ -37,7 +37,7 @@
             this.lblcategoriaproduto = new System.Windows.Forms.Label();
             this.lblprecoproduto = new System.Windows.Forms.Label();
             this.lblnomeproduto = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpeditarprodutos = new System.Windows.Forms.GroupBox();
             this.txbeditarcategoria = new System.Windows.Forms.TextBox();
             this.txbeditarpreco = new System.Windows.Forms.TextBox();
             this.txbeditarproduto = new System.Windows.Forms.TextBox();
@@ -50,7 +50,7 @@
             this.btnapagarproduto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.grbCadastrarProdutos.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grpeditarprodutos.SuspendLayout();
             this.grbapagarproduto.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,7 @@
             this.dgvProdutos.ReadOnly = true;
             this.dgvProdutos.Size = new System.Drawing.Size(817, 188);
             this.dgvProdutos.TabIndex = 5;
+            this.dgvProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellContentClick);
             // 
             // grbCadastrarProdutos
             // 
@@ -145,21 +146,21 @@
             this.lblnomeproduto.TabIndex = 7;
             this.lblnomeproduto.Text = "nome do produto:";
             // 
-            // groupBox1
+            // grpeditarprodutos
             // 
-            this.groupBox1.Controls.Add(this.txbeditarcategoria);
-            this.groupBox1.Controls.Add(this.txbeditarpreco);
-            this.groupBox1.Controls.Add(this.txbeditarproduto);
-            this.groupBox1.Controls.Add(this.btneditarproduto);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(428, 199);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(401, 188);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Produtos";
+            this.grpeditarprodutos.Controls.Add(this.txbeditarcategoria);
+            this.grpeditarprodutos.Controls.Add(this.txbeditarpreco);
+            this.grpeditarprodutos.Controls.Add(this.txbeditarproduto);
+            this.grpeditarprodutos.Controls.Add(this.btneditarproduto);
+            this.grpeditarprodutos.Controls.Add(this.label1);
+            this.grpeditarprodutos.Controls.Add(this.label2);
+            this.grpeditarprodutos.Controls.Add(this.label3);
+            this.grpeditarprodutos.Location = new System.Drawing.Point(428, 199);
+            this.grpeditarprodutos.Name = "grpeditarprodutos";
+            this.grpeditarprodutos.Size = new System.Drawing.Size(401, 188);
+            this.grpeditarprodutos.TabIndex = 14;
+            this.grpeditarprodutos.TabStop = false;
+            this.grpeditarprodutos.Text = "Produtos";
             // 
             // txbeditarcategoria
             // 
@@ -252,6 +253,7 @@
             this.btnapagarproduto.TabIndex = 4;
             this.btnapagarproduto.Text = "Apagar";
             this.btnapagarproduto.UseVisualStyleBackColor = true;
+            this.btnapagarproduto.Click += new System.EventHandler(this.btnapagarproduto_Click);
             // 
             // FrmGestaoProduto
             // 
@@ -259,7 +261,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(837, 450);
             this.Controls.Add(this.grbapagarproduto);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpeditarprodutos);
             this.Controls.Add(this.grbCadastrarProdutos);
             this.Controls.Add(this.dgvProdutos);
             this.Name = "FrmGestaoProduto";
@@ -268,8 +270,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.grbCadastrarProdutos.ResumeLayout(false);
             this.grbCadastrarProdutos.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpeditarprodutos.ResumeLayout(false);
+            this.grpeditarprodutos.PerformLayout();
             this.grbapagarproduto.ResumeLayout(false);
             this.grbapagarproduto.PerformLayout();
             this.ResumeLayout(false);
@@ -287,7 +289,7 @@
         private System.Windows.Forms.Label lblcategoriaproduto;
         private System.Windows.Forms.Label lblprecoproduto;
         private System.Windows.Forms.Label lblnomeproduto;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpeditarprodutos;
         private System.Windows.Forms.TextBox txbeditarcategoria;
         private System.Windows.Forms.TextBox txbeditarpreco;
         private System.Windows.Forms.TextBox txbeditarproduto;
