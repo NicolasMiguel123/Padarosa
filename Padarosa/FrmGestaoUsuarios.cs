@@ -14,7 +14,7 @@ namespace Padarosa
     {
         // Variavel global:
         Model.Usuario usuario;
-        private string email;
+        //private string email;
 
         public FrmGestaoUsuarios(Model.Usuario usuario)
         {
@@ -153,8 +153,8 @@ namespace Padarosa
             this.usuario.Email = dgvUsuarios1.Rows[linhaSelecionada].Cells[2].Value.ToString();
             this.usuario.Id = (int)dgvUsuarios1.Rows[linhaSelecionada].Cells[0].Value;
             // Atribuir os dados da linha selecionada no grbEditar:
-            txbnomeedicao.Text = Name;
-            txbemailedicao.Text = email;
+            txbnomeedicao.Text = this.usuario.NomeCompleto;
+            txbemailedicao.Text = this.usuario.Email;
             // Ativar o grbEditar
             grbEdicao.Enabled = true;
 

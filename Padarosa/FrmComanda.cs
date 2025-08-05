@@ -52,27 +52,41 @@ namespace Padarosa
 
         private void dgvComandas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int linhaselecionada = dgvComandas.SelectedCells[0].RowIndex;
-           txblancarproduto.Text = dgvComandas.Rows[linhaselecionada].Cells[0].Value.ToString();
-           txblancarcomandas.Text = dgvComandas.Rows[linhaselecionada].Cells[1].Value.ToString();
+           int linhaselecionada = dgvComandas.SelectedCells[0].RowIndex;
+            txbcastararproduto.Text = dgvComandas.Rows[linhaselecionada].Cells[0].Value.ToString();
+           txblancarproduto.Text = dgvComandas.Rows[linhaselecionada].Cells[1].Value.ToString();
+        }
+
+        public void ResetarCampos()
+        {
+            grbinformacao.Enabled = false;
+            grblancamento.Enabled = true;
+
+            // Limpar campos
+            txbcastararproduto.Clear();
+            txblancarquantidade.Clear();
+            txblancarproduto.Clear();
+            txbcastrarcomanda.Clear();
         }
 
         private void btnlancar_Click(object sender, EventArgs e)
         {
-            if(txblancarproduto.Text == "")
+            if(txblancarquantidade.Text == "")
             {
                 MessageBox.Show("Informe a quantidade do produto","ERROR!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                DialogResult r = MessageBox.Show("Tem certeza que deseja lançar" + $"{txblancarproduto.Text} usuarios de {txblancarcomandas.Text} na comanda{txbcastrarcomanda.Text}?");
+                DialogResult r = MessageBox.Show("Tem certeza que deseja lançar" + $"{txblancarquantidade.Text} usuarios de {txblancarproduto.Text} na comanda{txbcastrarcomanda.Text}?" 
+                    , "ATENÇÃO!!" , MessageBoxButtons.YesNo , MessageBoxIcon.Question);
+
                 // Se "sim":
                 if(r == DialogResult.Yes)
                 {
                     ordemComanda.idresp = usuario.Id;
-                    ordemComanda.idproduto = int.Parse(txblancarproduto.Text);
-                    ordemComanda.idficha = int.Parse(txblancarcomandas.Text);
-                    ordemComanda.quantidade = int.Parse(txblancarproduto.Text);
+                    ordemComanda.idproduto = int.Parse(txbcastararproduto.Text);
+                    ordemComanda.idficha = int.Parse(txbcastrarcomanda.Text);
+                    ordemComanda.quantidade = int.Parse(txblancarquantidade.Text);
                     ordemComanda.situacao = 1;
                     if (ordemComanda.Cadastrar())
                     {
@@ -88,6 +102,11 @@ namespace Padarosa
                     // Resetar os campos
                 }
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            ResetarCampos();
         }
     }
 }
