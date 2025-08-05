@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
-            this.grbCadastrarProdutos = new System.Windows.Forms.GroupBox();
-            this.txbcadastrarcategoria = new System.Windows.Forms.TextBox();
+            this.grbProdutos = new System.Windows.Forms.GroupBox();
             this.txbcadastrarpreco = new System.Windows.Forms.TextBox();
             this.txbcadastrarproduto = new System.Windows.Forms.TextBox();
             this.btncadastrarproduto = new System.Windows.Forms.Button();
@@ -48,8 +47,9 @@
             this.grbapagarproduto = new System.Windows.Forms.GroupBox();
             this.lblapagar2 = new System.Windows.Forms.Label();
             this.btnapagarproduto = new System.Windows.Forms.Button();
+            this.cmbcategoria = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
-            this.grbCadastrarProdutos.SuspendLayout();
+            this.grbProdutos.SuspendLayout();
             this.grpeditarprodutos.SuspendLayout();
             this.grbapagarproduto.SuspendLayout();
             this.SuspendLayout();
@@ -69,28 +69,21 @@
             this.dgvProdutos.TabIndex = 5;
             this.dgvProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellContentClick);
             // 
-            // grbCadastrarProdutos
+            // grbProdutos
             // 
-            this.grbCadastrarProdutos.Controls.Add(this.txbcadastrarcategoria);
-            this.grbCadastrarProdutos.Controls.Add(this.txbcadastrarpreco);
-            this.grbCadastrarProdutos.Controls.Add(this.txbcadastrarproduto);
-            this.grbCadastrarProdutos.Controls.Add(this.btncadastrarproduto);
-            this.grbCadastrarProdutos.Controls.Add(this.lblcategoriaproduto);
-            this.grbCadastrarProdutos.Controls.Add(this.lblprecoproduto);
-            this.grbCadastrarProdutos.Controls.Add(this.lblnomeproduto);
-            this.grbCadastrarProdutos.Location = new System.Drawing.Point(21, 199);
-            this.grbCadastrarProdutos.Name = "grbCadastrarProdutos";
-            this.grbCadastrarProdutos.Size = new System.Drawing.Size(401, 188);
-            this.grbCadastrarProdutos.TabIndex = 6;
-            this.grbCadastrarProdutos.TabStop = false;
-            this.grbCadastrarProdutos.Text = "Produtos";
-            // 
-            // txbcadastrarcategoria
-            // 
-            this.txbcadastrarcategoria.Location = new System.Drawing.Point(162, 98);
-            this.txbcadastrarcategoria.Name = "txbcadastrarcategoria";
-            this.txbcadastrarcategoria.Size = new System.Drawing.Size(213, 20);
-            this.txbcadastrarcategoria.TabIndex = 13;
+            this.grbProdutos.Controls.Add(this.cmbcategoria);
+            this.grbProdutos.Controls.Add(this.txbcadastrarpreco);
+            this.grbProdutos.Controls.Add(this.txbcadastrarproduto);
+            this.grbProdutos.Controls.Add(this.btncadastrarproduto);
+            this.grbProdutos.Controls.Add(this.lblcategoriaproduto);
+            this.grbProdutos.Controls.Add(this.lblprecoproduto);
+            this.grbProdutos.Controls.Add(this.lblnomeproduto);
+            this.grbProdutos.Location = new System.Drawing.Point(21, 199);
+            this.grbProdutos.Name = "grbProdutos";
+            this.grbProdutos.Size = new System.Drawing.Size(401, 188);
+            this.grbProdutos.TabIndex = 6;
+            this.grbProdutos.TabStop = false;
+            this.grbProdutos.Text = "Produtos";
             // 
             // txbcadastrarpreco
             // 
@@ -255,6 +248,14 @@
             this.btnapagarproduto.UseVisualStyleBackColor = true;
             this.btnapagarproduto.Click += new System.EventHandler(this.btnapagarproduto_Click);
             // 
+            // cmbcategoria
+            // 
+            this.cmbcategoria.FormattingEnabled = true;
+            this.cmbcategoria.Location = new System.Drawing.Point(162, 98);
+            this.cmbcategoria.Name = "cmbcategoria";
+            this.cmbcategoria.Size = new System.Drawing.Size(213, 21);
+            this.cmbcategoria.TabIndex = 13;
+            // 
             // FrmGestaoProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,14 +263,14 @@
             this.ClientSize = new System.Drawing.Size(837, 450);
             this.Controls.Add(this.grbapagarproduto);
             this.Controls.Add(this.grpeditarprodutos);
-            this.Controls.Add(this.grbCadastrarProdutos);
+            this.Controls.Add(this.grbProdutos);
             this.Controls.Add(this.dgvProdutos);
             this.Name = "FrmGestaoProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGestaoProduto";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
-            this.grbCadastrarProdutos.ResumeLayout(false);
-            this.grbCadastrarProdutos.PerformLayout();
+            this.grbProdutos.ResumeLayout(false);
+            this.grbProdutos.PerformLayout();
             this.grpeditarprodutos.ResumeLayout(false);
             this.grpeditarprodutos.PerformLayout();
             this.grbapagarproduto.ResumeLayout(false);
@@ -281,8 +282,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvProdutos;
-        private System.Windows.Forms.GroupBox grbCadastrarProdutos;
-        private System.Windows.Forms.TextBox txbcadastrarcategoria;
+        private System.Windows.Forms.GroupBox grbProdutos;
         private System.Windows.Forms.TextBox txbcadastrarpreco;
         private System.Windows.Forms.TextBox txbcadastrarproduto;
         private System.Windows.Forms.Button btncadastrarproduto;
@@ -300,5 +300,6 @@
         private System.Windows.Forms.GroupBox grbapagarproduto;
         private System.Windows.Forms.Label lblapagar2;
         private System.Windows.Forms.Button btnapagarproduto;
+        private System.Windows.Forms.ComboBox cmbcategoria;
     }
 }

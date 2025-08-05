@@ -16,10 +16,19 @@ namespace Padarosa
         // Variavel global:
         Model.Usuario usuario;
         Model.Produto produto = new Model.Produto();
+        Model.Categoria Categoria = new Model.Categoria();
         public FrmGestaoProduto(Model.Usuario usuario)
         {
             InitializeComponent();
             this.usuario = usuario;
+
+            // Obter as Categorias do banco:
+            DataTable resultadoCategoria = Categoria.Listar();
+
+            foreach(DataRow linha  in resultadoCategoria.Rows)
+            {
+                cmbcategoria.Items.Add($"{linha["id"]} - {linha["nome"]}");
+            }
 
             // Puxar o dados da tabela "produtos"
             Atualizardgv();
@@ -40,7 +49,7 @@ namespace Padarosa
             {
                 MessageBox.Show("O nome informado é invalido!", "ERROR!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (txbcadastrarcategoria.Text.Length == 0)
+            else if (cmbcategoria.Text.Length == 0)
             {
                 MessageBox.Show("O produto cadastrado invalido!", "ERROR!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -50,7 +59,7 @@ namespace Padarosa
                 Model.Produto produto = new Model.Produto();
                 produto.nome = txbcadastrarproduto.Text;
                 produto.preco = double.Parse(txbcadastrarpreco.Text);
-                produto.id_categoria = int.Parse(txbcadastrarcategoria.Text);
+               // produto.id_categoria = int.Parse(txbcadastrarcategoria.Text);
                 produto.id_respcadastro = usuario.Id;
 
                 if (produto.Cadastrar())
@@ -59,7 +68,7 @@ namespace Padarosa
                     // Limpar os campos de cadastro
                     txbcadastrarproduto.Clear();
                     txbcadastrarpreco.Clear();
-                    txbcadastrarcategoria.Clear();
+                    //txbcadastrarcategoria.Clear();
                     Atualizardgv();
                 }
                 else
@@ -92,14 +101,14 @@ namespace Padarosa
                 Model.Produto produto = new Model.Produto();
                 produto.nome = txbcadastrarproduto.Text;
                 produto.preco = double.Parse(txbcadastrarpreco.Text);
-                produto.id_categoria = int.Parse(txbcadastrarcategoria.Text);
+                //produto.id_categoria = int.Parse(txbcadastrarcategoria.Text);
                 produto.id_respcadastro = produto.Id;
 
                 if (usuario.Cadastrar())
                 {
                     MessageBox.Show("Usuario cadastradi com sucesso!!", "Sucesso!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // Limpar os campos 
-                    txbcadastrarcategoria.Clear();
+                    //cmbcategoria.Clear();
                     txbcadastrarpreco.Clear();
                     txbcadastrarproduto.Clear();
 
