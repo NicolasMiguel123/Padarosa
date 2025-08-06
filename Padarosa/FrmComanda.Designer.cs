@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmComanda));
             this.dgvComandas = new System.Windows.Forms.DataGridView();
             this.grblancamento = new System.Windows.Forms.GroupBox();
             this.txblancarquantidade = new System.Windows.Forms.TextBox();
@@ -202,9 +203,10 @@
             this.Controls.Add(this.dgvComandas);
             this.Controls.Add(this.grblancamento);
             this.Controls.Add(this.grbinformacao);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmComanda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmComanda";
+            this.Text = "Comanda";
             ((System.ComponentModel.ISupportInitialize)(this.dgvComandas)).EndInit();
             this.grblancamento.ResumeLayout(false);
             this.grblancamento.PerformLayout();

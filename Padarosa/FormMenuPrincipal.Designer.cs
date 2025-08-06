@@ -125,9 +125,10 @@
             this.Controls.Add(this.btngestaoprodutos);
             this.Controls.Add(this.lblPrincipal);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormMenuPrincipal";
+            this.Text = "Menu Principal";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -19,6 +19,14 @@ namespace Padarosa
             InitializeComponent();
             this.usuario = usuario;
             lblusuario.Text = $"Você esta logado como : {usuario.NomeCompleto}";
+
+
+            // Ocultar ps botoes de usuarios e produto
+            if(usuario.Id != 1)
+            {
+                btnusuario.Visible = false;
+                btngestaoprodutos.Visible = false;
+            }
         }
 
         private void btngestaoprodutos_Click(object sender, EventArgs e)

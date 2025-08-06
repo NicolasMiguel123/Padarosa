@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGestaoProduto));
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.grbProdutos = new System.Windows.Forms.GroupBox();
+            this.cmbcategoria = new System.Windows.Forms.ComboBox();
             this.txbcadastrarpreco = new System.Windows.Forms.TextBox();
             this.txbcadastrarproduto = new System.Windows.Forms.TextBox();
             this.btncadastrarproduto = new System.Windows.Forms.Button();
@@ -47,7 +49,6 @@
             this.grbapagarproduto = new System.Windows.Forms.GroupBox();
             this.lblapagar2 = new System.Windows.Forms.Label();
             this.btnapagarproduto = new System.Windows.Forms.Button();
-            this.cmbcategoria = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.grbProdutos.SuspendLayout();
             this.grpeditarprodutos.SuspendLayout();
@@ -84,6 +85,14 @@
             this.grbProdutos.TabIndex = 6;
             this.grbProdutos.TabStop = false;
             this.grbProdutos.Text = "Produtos";
+            // 
+            // cmbcategoria
+            // 
+            this.cmbcategoria.FormattingEnabled = true;
+            this.cmbcategoria.Location = new System.Drawing.Point(162, 98);
+            this.cmbcategoria.Name = "cmbcategoria";
+            this.cmbcategoria.Size = new System.Drawing.Size(213, 21);
+            this.cmbcategoria.TabIndex = 13;
             // 
             // txbcadastrarpreco
             // 
@@ -248,14 +257,6 @@
             this.btnapagarproduto.UseVisualStyleBackColor = true;
             this.btnapagarproduto.Click += new System.EventHandler(this.btnapagarproduto_Click);
             // 
-            // cmbcategoria
-            // 
-            this.cmbcategoria.FormattingEnabled = true;
-            this.cmbcategoria.Location = new System.Drawing.Point(162, 98);
-            this.cmbcategoria.Name = "cmbcategoria";
-            this.cmbcategoria.Size = new System.Drawing.Size(213, 21);
-            this.cmbcategoria.TabIndex = 13;
-            // 
             // FrmGestaoProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,9 +266,10 @@
             this.Controls.Add(this.grpeditarprodutos);
             this.Controls.Add(this.grbProdutos);
             this.Controls.Add(this.dgvProdutos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmGestaoProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmGestaoProduto";
+            this.Text = "Gestão de Produtos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.grbProdutos.ResumeLayout(false);
             this.grbProdutos.PerformLayout();

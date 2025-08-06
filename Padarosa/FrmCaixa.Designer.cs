@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCaixa));
             this.dgvCaixa = new System.Windows.Forms.DataGridView();
             this.lblcomandacaixa = new System.Windows.Forms.Label();
             this.txbnumerocomandacaixa = new System.Windows.Forms.TextBox();
@@ -120,9 +121,10 @@
             this.Controls.Add(this.txbnumerocomandacaixa);
             this.Controls.Add(this.lblcomandacaixa);
             this.Controls.Add(this.dgvCaixa);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCaixa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCaixa";
+            this.Text = "Caixa";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCaixa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

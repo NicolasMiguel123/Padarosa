@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGestaoUsuarios));
             this.lblnome = new System.Windows.Forms.Label();
             this.lblemail = new System.Windows.Forms.Label();
             this.lblsenha = new System.Windows.Forms.Label();
@@ -265,9 +266,10 @@
             this.Controls.Add(this.grbapagar);
             this.Controls.Add(this.grbEdicao);
             this.Controls.Add(this.grbCadastro);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmGestaoUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmGestaoUsuarios";
+            this.Text = "Gestão de Usuarios";
             this.grbCadastro.ResumeLayout(false);
             this.grbCadastro.PerformLayout();
             this.grbEdicao.ResumeLayout(false);
